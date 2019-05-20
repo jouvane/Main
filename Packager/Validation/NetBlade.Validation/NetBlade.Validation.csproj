@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EAA4B3B5-CF3F-45FF-953A-67C15F8235B5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetBlade.Validation</RootNamespace>
+    <AssemblyName>NetBlade.Validation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accessor[T, TProperty].cs" />
+    <Compile Include="Assert.cs" />
+    <Compile Include="Assertion.cs" />
+    <Compile Include="Assertion[T, TResult].cs" />
+    <Compile Include="Assert[T].cs" />
+    <Compile Include="ClientValidationRules\ClientValidationRule.cs" />
+    <Compile Include="ClientValidationRules\MaxLengthClientValidationRule.cs" />
+    <Compile Include="ClientValidationRules\RequiredClientValidationRule.cs" />
+    <Compile Include="IAssert.cs" />
+    <Compile Include="IAssert[T].cs" />
+    <Compile Include="Predicate.cs" />
+    <Compile Include="Predicate[T].cs" />
+    <Compile Include="ValidationHelper\ISpecification[T].cs" />
+    <Compile Include="ValidationHelper\PtBr\ValidationHelperPtBr.Comparable.cs" />
+    <Compile Include="ValidationHelper\PtBr\ValidationHelperPtBr.cs" />
+    <Compile Include="ValidationHelper\PtBr\ValidationHelperPtBr.EntityBase.cs" />
+    <Compile Include="ValidationHelper\PtBr\ValidationHelperPtBr.Equatable.cs" />
+    <Compile Include="ValidationHelper\PtBr\ValidationHelperPtBr.Nullable.cs" />
+    <Compile Include="ValidationHelper\PtBr\ValidationHelperPtBr.Specification.cs" />
+    <Compile Include="ValidationHelper\PtBr\ValidationHelperPtBr.String.cs" />
+    <Compile Include="ValidationHelper\ValidationHelper.cs" />
+    <Compile Include="ValidationHelper\ValidationHelper.Equatable.cs" />
+    <Compile Include="ValidationHelper\ValidationHelper.Nullable.cs" />
+    <Compile Include="ValidationHelper\ValidationHelper.Regex.cs" />
+    <Compile Include="ValidationHelper\ValidationHelper.String.cs" />
+    <Compile Include="Validator[T, TResult].cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ValidationHelper\ValidationHelper.Comparable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ValidationHelper\ValidationHelper.EntityBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ValidationHelper\ValidationHelper.Specification.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
